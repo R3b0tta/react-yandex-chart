@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import * as d3 from 'd3';
 
-const StockChart = () => {
+const StockChart = (props) => {
     const api_key = "t.FARaEgxk9BjSpN028sHg7R1YdsxqeCoDZn3__u7ICszGK4x8xCrRHEe1ZEzKNq7nf98M0pXRkk17YqLpMdtitg";
     const headers = {
         'accept': 'application/json',
@@ -9,7 +9,6 @@ const StockChart = () => {
         'Content-Type': 'application/json'
     };
     const GetCandles = 'https://invest-public-api.tinkoff.ru/rest/tinkoff.public.invest.api.contract.v1.MarketDataService/GetCandles';
-
     function getData(url, request) {
         fetch(url, {
             method: 'POST',
@@ -115,7 +114,7 @@ const StockChart = () => {
 
     useEffect(() => {
         getData(GetCandles, {
-            figi: "TCS00A107T19",
+            figi: props.figi,
             from: fromISOString, // Начальная дата
             to: toISOString, // Конечная дата
             interval: '1',

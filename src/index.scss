@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+  margin: 20px 250px;
+  max-width: 1400px;
+  align-content: center;
+  align-items: center;
+  font-family: Inter;
+  font-color: black;
+}
+
+header {
+  margin: 20px 0;
+  border-bottom: 1px solid #c6c4c4;
+  font-weight: bold;
+  img {
+    margin-right: 10px;
+  }
+}
+
+.menu_button {
+  font-weight: bold;
+  position: absolute;
+  font-size: 20px;
+  margin-left: 130px;
+  transition: background-color 0.2s ease-in-out;
+  display: inline-block;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  padding: 5px;
+}
+.menu_button:hover {
+  background-color: #c7c2c2;
+   cursor: pointer;
+  border-color: #c7c2c2;
+ }
+
+.menu {
+  position: absolute;
+  width: 220px;
+  margin: 10px;
+  padding: 25px;
+  background-color: #fff;
+  border: 1px solid #9D9D9D;
+  border-radius: 7px;
+  opacity: 0;
+  transform: translateY(-10px);
+  visibility: hidden;
+  transition: 0.3s;
+}
+.menu.active {
+  transform: translateY(0) ;
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu:before,
+.menu:after {
+  display: block;
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 15px;
+  border: 10px solid transparent;
+}
+
+.menu:before {
+  top: -20px;
+  border-bottom: 10px solid #9D9D9D;
+}
+
+.menu:after {
+  top: -19px;
+  border-bottom: 10px solid #fff;
+}
+
+.menu_list {
+  margin: 0;
+  width: 100%;
+  padding: 0;
+  list-style-type: none;
+}
+
+.menu_item {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  padding: 5px;
+}
+.menu_item:hover {
+  background-color: #c7c2c2;
+  cursor: pointer;
+  border-color: #c7c2c2;
+}
+
+.menu_item:nth-child(n+2) {
+  margin-top: 15px;
+}
+.link {
+  color: inherit; /* Использует цвет родительского элемента */
+  text-decoration: none; /* Убирает подчеркивание */
+  outline: none; /* Убирает фокусное кольцо */
+}
+
+.link:focus {
+  outline: none; /* Убирает фокусное кольцо при фокусе */
+}
