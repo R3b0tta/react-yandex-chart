@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import * as d3 from 'd3';
 
 const StockChart = () => {
-    const api_key = "t.FARaEgxk9BjSpN028sHg7R1YdsxqeCoDZn3__u7ICszGK4x8xCrRHEe1ZEzKNq7nf98M0pXRkk17YqLpMdtitg";
+    const api_key = "hiden";
     const headers = {
         'accept': 'application/json',
         'Authorization': `Bearer ${api_key}`,
